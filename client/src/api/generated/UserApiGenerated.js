@@ -58,22 +58,6 @@ class UserApiGenerated {
   }
 
   /**
-  * UserService.findBy_address
-  *   @description CRUD ACTION findBy_address
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  static findBy_address(id) {
-    return axios.get(UserApiGenerated.contextUrl + "/findBy_address/" + id )
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        throw error;
-      });
-  }
-
-  /**
   * UserService.get
   *   @description CRUD ACTION get
   *   @param ObjectId id Id resource

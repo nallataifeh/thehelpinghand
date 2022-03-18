@@ -66,16 +66,6 @@ const generatedModel = {
   },
   
   /**
-  * UserModel.findBy_address
-  *   @description CRUD ACTION findBy_address
-  *   @param Objectid key Id of model to search for
-  *
-  */
-  async findBy_address(key) {
-    return await Database.getConnection().models.User.findAll({ where: { "_address": key } });
-  },
-  
-  /**
   * UserModel.get
   *   @description CRUD ACTION get
   *   @param ObjectId id Id resource

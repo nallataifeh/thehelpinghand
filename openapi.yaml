@@ -78,7 +78,7 @@ paths:
           description: OK
   /user:
     post:
-      x-skaffolder-id: 6233d298c97c70218d6501f0
+      x-skaffolder-id: 6233d9aec97c70218d650237
       x-skaffolder-name: create
       x-skaffolder-id-resource: 6233d0fac97c70218d650164
       x-skaffolder-resource: User
@@ -123,7 +123,7 @@ paths:
                 username:
                   type: string
     get:
-      x-skaffolder-id: 6233d298c97c70218d6501f7
+      x-skaffolder-id: 6233d9aec97c70218d650240
       x-skaffolder-name: list
       x-skaffolder-id-resource: 6233d0fac97c70218d650164
       x-skaffolder-resource: User
@@ -148,7 +148,7 @@ paths:
                   $ref: "#/components/schemas/User"
   "/user/{id}":
     delete:
-      x-skaffolder-id: 6233d298c97c70218d6501f6
+      x-skaffolder-id: 6233d9aec97c70218d65023f
       x-skaffolder-name: delete
       x-skaffolder-id-resource: 6233d0fac97c70218d650164
       x-skaffolder-resource: User
@@ -174,7 +174,7 @@ paths:
         "200":
           description: OK
     get:
-      x-skaffolder-id: 6233d298c97c70218d6501f1
+      x-skaffolder-id: 6233d9aec97c70218d650238
       x-skaffolder-name: get
       x-skaffolder-id-resource: 6233d0fac97c70218d650164
       x-skaffolder-resource: User
@@ -204,7 +204,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/User"
     post:
-      x-skaffolder-id: 6233d298c97c70218d6501f3
+      x-skaffolder-id: 6233d9aec97c70218d650239
       x-skaffolder-name: update
       x-skaffolder-id-resource: 6233d0fac97c70218d650164
       x-skaffolder-resource: User
@@ -239,42 +239,9 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/User"
-  "/user/findBy_address/{key}":
-    get:
-      x-skaffolder-id: 6233d29dc97c70218d6501ff
-      x-skaffolder-name: findBy_address
-      x-skaffolder-id-resource: 6233d0fac97c70218d650164
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: findBy_address
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION findBy_address
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /findBy_address/{key}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION findBy_address
-      tags:
-        - User
-      parameters:
-        - name: key
-          x-skaffolder-type: Objectid
-          in: path
-          description: Id of model to search for
-          required: true
-          schema:
-            type: Objectid
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/User"
   /address:
     post:
-      x-skaffolder-id: 6233d29dc97c70218d6501fa
+      x-skaffolder-id: 6233d9b3c97c70218d650243
       x-skaffolder-name: create
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -315,7 +282,7 @@ paths:
                 unitNumber:
                   type: string
     get:
-      x-skaffolder-id: 6233d298c97c70218d6501f5
+      x-skaffolder-id: 6233d9b3c97c70218d650249
       x-skaffolder-name: list
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -340,7 +307,7 @@ paths:
                   $ref: "#/components/schemas/address"
   "/address/{id}":
     delete:
-      x-skaffolder-id: 6233d29dc97c70218d650202
+      x-skaffolder-id: 6233d9b3c97c70218d65024a
       x-skaffolder-name: delete
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -366,7 +333,7 @@ paths:
         "200":
           description: OK
     get:
-      x-skaffolder-id: 6233d29dc97c70218d6501fb
+      x-skaffolder-id: 6233d9b3c97c70218d650245
       x-skaffolder-name: get
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -396,7 +363,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/address"
     post:
-      x-skaffolder-id: 6233d29dc97c70218d6501fd
+      x-skaffolder-id: 6233d9b3c97c70218d650244
       x-skaffolder-name: update
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -433,7 +400,7 @@ paths:
               $ref: "#/components/schemas/address"
   "/address/findBy_user/{key}":
     get:
-      x-skaffolder-id: 6233d778c97c70218d650233
+      x-skaffolder-id: 6233d9aec97c70218d65023c
       x-skaffolder-name: findBy_user
       x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-resource: address
@@ -585,58 +552,58 @@ components:
       x-skaffolder-services: 
       x-skaffolder-nesteds: 
       x-skaffolder-links:
-        - 6233d268c97c70218d6501eb
-        - 6233d29dc97c70218d650201
+        - 6233d9aec97c70218d65023e
+        - 6233d9b3c97c70218d650248
       x-skaffolder-roles: []
-    - x-skaffolder-id: 6233d268c97c70218d6501e5
+    - x-skaffolder-id: 6233d9adc97c70218d650236
       x-skaffolder-name: UserEdit
       x-skaffolder-url: /users/{id}
       x-skaffolder-template: Edit_Crud
       x-skaffolder-resource: 6233d0fac97c70218d650164
       x-skaffolder-services:
-        - 6233d298c97c70218d6501f0
-        - 6233d298c97c70218d6501f3
-        - 6233d298c97c70218d6501f1
-        - 6233d778c97c70218d650233
+        - 6233d9aec97c70218d650237
+        - 6233d9aec97c70218d650239
+        - 6233d9aec97c70218d650238
+        - 6233d9aec97c70218d65023c
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
-    - x-skaffolder-id: 6233d268c97c70218d6501eb
+    - x-skaffolder-id: 6233d9aec97c70218d65023e
       x-skaffolder-name: UserList
       x-skaffolder-url: /users
       x-skaffolder-template: List_Crud
       x-skaffolder-resource: 6233d0fac97c70218d650164
       x-skaffolder-services:
-        - 6233d298c97c70218d6501f6
-        - 6233d298c97c70218d6501f7
+        - 6233d9aec97c70218d65023f
+        - 6233d9aec97c70218d650240
       x-skaffolder-nesteds: 
       x-skaffolder-links:
-        - 6233d268c97c70218d6501e5
+        - 6233d9adc97c70218d650236
       x-skaffolder-roles: []
-    - x-skaffolder-id: 6233d29dc97c70218d6501f9
+    - x-skaffolder-id: 6233d9b3c97c70218d650242
       x-skaffolder-name: addressEdit
       x-skaffolder-url: /addresses/{id}
       x-skaffolder-template: Edit_Crud
       x-skaffolder-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-services:
-        - 6233d29dc97c70218d6501fa
-        - 6233d29dc97c70218d6501fd
-        - 6233d29dc97c70218d6501fb
-        - 6233d298c97c70218d6501f7
+        - 6233d9b3c97c70218d650243
+        - 6233d9b3c97c70218d650244
+        - 6233d9b3c97c70218d650245
+        - 6233d9aec97c70218d650240
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
-    - x-skaffolder-id: 6233d29dc97c70218d650201
+    - x-skaffolder-id: 6233d9b3c97c70218d650248
       x-skaffolder-name: addressList
       x-skaffolder-url: /addresses
       x-skaffolder-template: List_Crud
       x-skaffolder-resource: 6233d23dc97c70218d6501e3
       x-skaffolder-services:
-        - 6233d29dc97c70218d650202
-        - 6233d298c97c70218d6501f5
+        - 6233d9b3c97c70218d65024a
+        - 6233d9b3c97c70218d650249
       x-skaffolder-nesteds: 
       x-skaffolder-links:
-        - 6233d29dc97c70218d6501f9
+        - 6233d9b3c97c70218d650242
       x-skaffolder-roles: []
   x-skaffolder-roles: 
     - x-skaffolder-id: 6233d0fbc97c70218d650166

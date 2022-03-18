@@ -61,25 +61,6 @@ let actionsFunction = {
   },
 
 
-  // Find by _address
-  findBy_address: function(key) {
-    return function(dispatch) {
-      return UserApi
-        .findBy_address(key)
-        .then(item => {
-          dispatch(actionsFunction.findBy_addressSuccess(item));
-        })
-        .catch(error => {
-          throw error;
-        });
-    };
-  },
-
-  findBy_addressSuccess: function(item) {
-    return { type: types.FINDBY_ADDRESS_USER_SUCCESS, payload: item };
-  },
-
-
   // Get user
   loadUser: function(id) {
     return function(dispatch) {
