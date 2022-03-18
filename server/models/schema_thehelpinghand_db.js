@@ -66,17 +66,17 @@ export default init => {
       
       //RELATIONS
         
-      _address:  {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "address",
-          key: '_id',
-        },
-      },
       
       
       //EXTERNAL RELATIONS
       /*
+      _user: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: address,
+          key: '_id',
+        }
+      },
       */
     },
       { sequelize, tableName: "user", timestamps: false }
@@ -128,17 +128,17 @@ export default init => {
       
       //RELATIONS
         
+      _user:  {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "User",
+          key: '_id',
+        },
+      },
       
       
       //EXTERNAL RELATIONS
       /*
-      _address: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: User,
-          key: '_id',
-        }
-      },
       */
     },
       { sequelize, tableName: "address", timestamps: false }

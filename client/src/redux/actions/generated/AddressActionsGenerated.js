@@ -61,6 +61,25 @@ let actionsFunction = {
   },
 
 
+  // Find by _user
+  findBy_user: function(key) {
+    return function(dispatch) {
+      return AddressApi
+        .findBy_user(key)
+        .then(item => {
+          dispatch(actionsFunction.findBy_userSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findBy_userSuccess: function(item) {
+    return { type: types.FINDBY_USER_ADDRESS_SUCCESS, payload: item };
+  },
+
+
   // Get address
   loadAddress: function(id) {
     return function(dispatch) {

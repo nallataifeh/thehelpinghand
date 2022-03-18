@@ -20,7 +20,7 @@ export default function addressEditReducer(state = initialState, action) {
       return { ...state, address: action.payload };
     case types.GET_ADDRESS_SUCCESS:
       return { ...state, address: action.payload };
-    case types.FINDBY_ADDRESS_USER_SUCCESS:
+    case types.LIST_USER_SUCCESS:
       return { ...state, listUser: action.payload };
      // END REDUCERS
     

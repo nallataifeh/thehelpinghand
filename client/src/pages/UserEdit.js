@@ -32,8 +32,9 @@ import Delete from "@material-ui/icons/Delete";
 *	@description CRUD ACTION get
 *	@param ObjectId id - Id resource
 *
-* actionsAddress.list
-*	@description CRUD ACTION list
+* actionsAddress.findBy_user
+*	@description CRUD ACTION findBy_user
+*	@param Objectid key - Id of model to search for
 *
 
 **/

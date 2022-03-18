@@ -33,9 +33,8 @@ import AddressActions from "../redux/actions/AddressActions";
 *	@description CRUD ACTION get
 *	@param ObjectId id - Id resource
 *
-* actionsUser.findBy_address
-*	@description CRUD ACTION findBy_address
-*	@param Objectid key - Id of model to search for
+* actionsUser.list
+*	@description CRUD ACTION list
 *
 
 **/

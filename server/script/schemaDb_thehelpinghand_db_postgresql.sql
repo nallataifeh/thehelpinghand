@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS "user" (
 	lastName varchar(130) ,
 	password varchar(130)  NOT NULL,
 	profilePicture varchar(130) ,
-	roles varchar(130) ,
 	username varchar(130)  NOT NULL,
 	
 	_id SERIAL PRIMARY KEY
@@ -62,5 +61,5 @@ CREATE TABLE IF NOT EXISTS "address" (
 
 
 
--- relation 1:m _address User - address
-ALTER TABLE user ADD COLUMN _address INTEGER  REFERENCES "address"(_id);
+-- relation 1:m _user address - User
+ALTER TABLE address ADD COLUMN _user INTEGER  REFERENCES "user"(_id);

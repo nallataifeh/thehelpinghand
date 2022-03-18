@@ -120,8 +120,6 @@ paths:
                   type: string
                 profilePicture:
                   type: string
-                roles:
-                  type: string
                 username:
                   type: string
     get:
@@ -433,6 +431,39 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/address"
+  "/address/findBy_user/{key}":
+    get:
+      x-skaffolder-id: 6233d778c97c70218d650233
+      x-skaffolder-name: findBy_user
+      x-skaffolder-id-resource: 6233d23dc97c70218d6501e3
+      x-skaffolder-resource: address
+      x-skaffolder-crudAction: findBy_user
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION findBy_user
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /findBy_user/{key}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION findBy_user
+      tags:
+        - address
+      parameters:
+        - name: key
+          x-skaffolder-type: Objectid
+          in: path
+          description: Id of model to search for
+          required: true
+          schema:
+            type: Objectid
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/address"
 security:
   - bearerAuth: []
 components:
@@ -481,21 +512,12 @@ components:
           type: string
           x-skaffolder-id-attr: 6233d1e7c97c70218d6501d7
           x-skaffolder-type: String
-        roles:
-          type: string
-          x-skaffolder-id-attr: 6233d0fac97c70218d650162
-          x-skaffolder-type: String
         username:
           type: string
           x-skaffolder-id-attr: 6233d0fac97c70218d65015d
           x-skaffolder-type: String
           x-skaffolder-required: true
-      x-skaffolder-relations:
-        _address:
-          x-skaffolder-id: 6233d293c97c70218d6501ef
-          x-skaffolder-type: 1:m
-          x-skaffolder-ent1: 6233d0fac97c70218d65015c
-          x-skaffolder-ent2: 6233d23dc97c70218d6501dc
+      x-skaffolder-relations: 
       required:
         - _id
         - password
@@ -538,7 +560,12 @@ components:
           type: string
           x-skaffolder-id-attr: 6233d23dc97c70218d6501de
           x-skaffolder-type: String
-      x-skaffolder-relations: 
+      x-skaffolder-relations:
+        _user:
+          x-skaffolder-id: 6233d770c97c70218d650232
+          x-skaffolder-type: 1:m
+          x-skaffolder-ent1: 6233d23dc97c70218d6501dc
+          x-skaffolder-ent2: 6233d0fac97c70218d65015c
       required:
         - _id
         - city
@@ -570,7 +597,7 @@ components:
         - 6233d298c97c70218d6501f0
         - 6233d298c97c70218d6501f3
         - 6233d298c97c70218d6501f1
-        - 6233d298c97c70218d6501f5
+        - 6233d778c97c70218d650233
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
@@ -595,7 +622,7 @@ components:
         - 6233d29dc97c70218d6501fa
         - 6233d29dc97c70218d6501fd
         - 6233d29dc97c70218d6501fb
-        - 6233d29dc97c70218d6501ff
+        - 6233d298c97c70218d6501f7
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []

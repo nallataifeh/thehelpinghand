@@ -29,6 +29,7 @@ const generatedControllers = {
     const baseUrl = `${Properties.api}/address`;
     router.post(baseUrl + "", authorize([]), AddressController.create);
     router.delete(baseUrl + "/:id", authorize([]), AddressController.delete);
+    router.get(baseUrl + "/findBy_user/:key", authorize([]), AddressController.findBy_user);
     router.get(baseUrl + "/:id", authorize([]), AddressController.get);
     router.get(baseUrl + "", authorize([]), AddressController.list);
     router.post(baseUrl + "/:id", authorize([]), AddressController.update);
@@ -62,6 +63,22 @@ const generatedControllers = {
   delete: async (req, res) => {
     try {
       const result = await AddressModel.delete(req.params.id);
+      res.json(result);
+    } catch (err) {
+      const safeErr = ErrorManager.getSafeError(err);
+      res.status(safeErr.status).json(safeErr);
+    }
+  },
+  
+  /**
+  * addressModel.findBy_user
+  *   @description CRUD ACTION findBy_user
+  *   @param Objectid key Id of model to search for
+  *
+  */
+  findBy_user: async (req, res) => {
+    try {
+      const result = await AddressModel.findBy_user(req.params.key);
       res.json(result);
     } catch (err) {
       const safeErr = ErrorManager.getSafeError(err);

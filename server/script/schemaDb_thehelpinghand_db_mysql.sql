@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 	`lastName` varchar(130) ,
 	`password` varchar(130)  NOT NULL,
 	`profilePicture` varchar(130) ,
-	`roles` varchar(130) ,
 	`username` varchar(130)  NOT NULL,
 	
 	`_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT 
@@ -66,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `address` (
 
 
 
--- relation 1:m _address User - address
-ALTER TABLE `user` ADD COLUMN `_address` int(11)  REFERENCES address(_id);
+-- relation 1:m _user address - User
+ALTER TABLE `address` ADD COLUMN `_user` int(11)  REFERENCES user(_id);
 
 
